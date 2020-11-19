@@ -48,19 +48,20 @@ class BIT:
         """
         return self.sum(j) - self.sum(i)
 
+if __name__ == "__main__":
+    size = 10
+    arr = [randint(-100, 100) for i in range(size)]  # Takes an array of random integers numbers.
+    bit = BIT(arr)  # Creates a Fenwick tree structure
+    preSum = [*accumulate(arr)]
 
-size = 10
-arr = [randint(-100, 100) for i in range(size)]  # Takes an array of random integers numbers.
-bit = BIT(arr)  # Creates a Fenwick tree structure
-preSum = [*accumulate(arr)]
-
-# -------------------- Testing --------------------
-print("Original array:    ", arr)
-print("Prefix Sum array:  ", preSum)  # A prefix sum of arr to compare with BIT class to test
-# Sum from Fenwick Tree
-print("Fenwick Tree array:", "[", end="")
-for i in range(size - 1):
-    print(bit.sum(i), end=", ")
-print(bit.sum(size - 1), "]", sep="")
-print("Sum of 2nd quarter of array using prefix array:",preSum[size // 2] - preSum[size // 4])  # Range sum using (final - start).
-print("Sum of 2nd quarter of array using Binary Index Tree:",bit.rangeSum(size // 4, size // 2))  # Range sum using rangeSum method.
+    
+    # -------------------- Testing --------------------
+    print("Original array:    ", arr)
+    print("Prefix Sum array:  ", preSum)  # A prefix sum of arr to compare with BIT class to test
+    # Sum from Fenwick Tree
+    print("Fenwick Tree array:", "[", end="")
+    for i in range(size - 1):
+        print(bit.sum(i), end=", ")
+    print(bit.sum(size - 1), "]", sep="")
+    print("Sum of 2nd quarter of array using prefix array:     ",preSum[size // 2] - preSum[size // 4])  # Range sum using (final - start).
+    print("Sum of 2nd quarter of array using Binary Index Tree:",bit.rangeSum(size // 4, size // 2))  # Range sum using rangeSum method.
