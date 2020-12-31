@@ -18,7 +18,7 @@ class SegmentTree:
         """
         :param idx1: The start of the range query(inclusive)
         :param idx2: Then end of the range qurey (exclusive)
-        :param default: The default value to start the query from.
+        :param default: The default value to start the query from. (Depends on the function)
         :return: The query result.
         """
         idx1 += self.size
