@@ -4,7 +4,7 @@ from itertools import accumulate
 
 class BIT:
     """
-    Creates a Binary Index Tree (Fenwick Tree)
+    Creates a Binary Index Tree (Fenwick Tree) that can be updated and queried.
     """
     def __init__(self, arr: [int]):
         """
