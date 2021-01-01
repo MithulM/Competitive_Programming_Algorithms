@@ -2,7 +2,10 @@ from sys import maxsize
 
 
 class SegmentTree:
-
+    """
+    Creates a Segment Tree that can be updated and queried.
+    """
+    
     def __init__(self, arr: list, func):
         """
         :param arr: The arryay to make the segment tree for.
