@@ -1,3 +1,7 @@
+"""
+From: https://discuss.codechef.com/t/does-codechef-support-tampering-with-input-output/68269 
+"""
+
 from sys import stdout, stdin
 from io import IOBase, BytesIO
 from os import read, write, fstat
