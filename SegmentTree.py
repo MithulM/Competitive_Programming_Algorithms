@@ -6,7 +6,7 @@ class SegmentTree:
     Creates a Segment Tree that can be updated and queried.
     """
     
-    def __init__(self, arr: list, func):
+    def __init__(self, arr: list, func: callable):
         """
         :param arr: The arryay to make the segment tree for.
         :param func: The function to use to fill the segment tree with.
